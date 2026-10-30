@@ -1,0 +1,13 @@
+# cf-picbed — Pages deployment (images.example.com). Single deployment target:
+# Cloudflare Pages Functions. There is no Worker deployment any more
+# (wrangler.worker.toml removed in v2.38.0), so this is the only config file.
+# NOTE: Pages requires the standard root config file and rejects "main".
+name = "cf-picbed"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-01"
+
+# D1: users / sessions / api_keys / images / rate_limits
+[[d1_databases]]
+binding = "DB"
+database_name = "cf-picbed-db"
+database_id = "00000000-0000-0000-0000-000000000000"

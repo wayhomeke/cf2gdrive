@@ -1,0 +1,11 @@
+# Copy to .dev.vars (ignored by Git). Never commit real values.
+# Generate a unique SESSION_SECRET locally: openssl rand -hex 32
+SESSION_SECRET=
+# Optional bootstrap override; replace with your own administrator email.
+ADMIN_EMAILS=
+# Prefer the web setup at /admin/storage. These legacy variables are optional
+# for the application, but required by direct Drive integration tests.
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_REFRESH_TOKEN=
+DRIVE_FOLDER_ID=

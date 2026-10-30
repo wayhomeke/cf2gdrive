@@ -1,0 +1,17 @@
+{
+  "name": "cf2gdrive",
+  "version": "2.39.1",
+  "private": true,
+  "description": "Cloudflare Worker image hosting and file relay backed by Google Drive, multi-user with auth and API",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev",
+    "build:pages": "bash scripts/build-pages.sh",
+    "deploy:pages": "wrangler pages deploy dist --project-name cf-picbed --branch main",
+    "db:local": "wrangler d1 execute cf-picbed-db --local --file=schema.sql",
+    "db:remote": "wrangler d1 execute cf-picbed-db --remote --file=schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.152.0"
+  }
+}
